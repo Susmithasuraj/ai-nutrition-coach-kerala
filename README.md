@@ -1,6 +1,6 @@
 # 🥥 AI Nutrition Coach for Keralites
 
-**🚀 Live Demo:** [Add your Streamlit URL here] 
+**🚀 Live Demo:** [https://ai-nutrition-coach-kerala-nutrition-coach.streamlit.app]
 **📂 GitHub:** https://github.com/Susmithasuraj/ai-nutrition-coach-kerala
 
 **Zeroth Phase MVP** - Personalized 7-day Kerala meal plans for weight loss, postpartum, thyroid, PCOS
