@@ -20,14 +20,14 @@ weight = st.sidebar.number_input("Weight (kg)", min_value=30.0, max_value=200.0,
 height = st.sidebar.number_input("Height (cm)", min_value=100, max_value=220, value=160)
 gender = st.sidebar.selectbox("Gender", ["female", "male"])
 goal = st.sidebar.selectbox("Goal", ["weight_loss", "postpartum", "muscle_gain", "thyroid", "pcos"])
-activity = st.sidebar.selectbox("Activity", ["Activity","sedentary", "light", "moderate", "active", "very_active"])
+activity = st.sidebar.selectbox("Activity", ["sedentary", "light", "moderate", "active", "very_active"])
 
 if gender == "female":
     bmr = 10*weight + 6.25*height - 5*age - 161
 else:
     bmr = 10*weight + 6.25*height - 5*age + 5
 
-activity_map = {"Sedentary": 1.2, "Light": 1.375, "Moderate": 1.55, "Active": 1.725}
+activity_map = {"sedentary": 1.2, "light": 1.375, "moderate": 1.55, "active": 1.725}
 tdee = bmr * activity_map[activity]
 
 if goal == "weight_loss":
