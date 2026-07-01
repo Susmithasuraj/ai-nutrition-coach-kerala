@@ -14,9 +14,9 @@ st.write("**Zeroth Phase MVP** - Personalized Kerala meal plans for weight loss,
 
 st.sidebar.header("📊 Your Details")
 name = st.sidebar.text_input("Name", "Enter your name")
-age = st.sidebar.number_input("Age", "Enter your age")
-weight = st.sidebar.number_input("Weight (kg)", "Enter your weight")
-height = st.sidebar.number_input("Height (cm)", "Enter your height")
+age = st.sidebar.number_input("Age", 18,50,23)
+weight = st.sidebar.number_input("Weight (kg)", 50,85,61.5)
+height = st.sidebar.number_input("Height (cm)", 165,170,155)
 gender = st.sidebar.selectbox("Gender", ["female", "male"])
 goal = st.sidebar.selectbox("Goal", ["weight_loss", "muscle_gain", "postpartum", "thyroid", "maintenance"])
 activity = st.sidebar.select_slider("Activity", ["Sedentary", "Light", "Moderate", "Active"], "Light")
