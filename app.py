@@ -49,7 +49,11 @@ if goal == "postpartum":
     st.info("🤱 **BF Mode**: Extra 500 kcal added. Iron + Calcium rich foods: Meen Curry, Cheera Thoran, Payar.")
 
 st.divider()
-st.subheader(f"🍛 Recommended Kerala Foods for {goal.replace('_', ' ').title()}")
+
+# ===== 7-DAY MEAL PLAN STARTS HERE =====
+st.subheader(f"📅 7-Day Personalized Kerala Meal Plan for {goal.replace('_', ' ').title()}")
+
+# Food database from CSV + hardcoded options
 tag_map = {
     "weight_loss": "weight-loss|low-fat",
     "muscle_gain": "muscle-gain|protein",
@@ -57,10 +61,75 @@ tag_map = {
     "thyroid": "thyroid-friendly",
     "maintenance": ""
 }
-if tag_map[goal]:
-    filtered = df[df['tags'].str.contains(tag_map[goal], na=False, case=False)]
-else:
-    filtered = df
 
-st.dataframe(filtered[['food_name', 'portion', 'calories', 'protein_g', 'tags']], use_container_width=True, height=400)
-st.caption("Built in 1 Day 🚀 | Data: ICMR + Kerala Agri Uni")
+if tag_map[goal]:
+    filtered_df = df[df['tags'].str.contains(tag_map[goal], na=False, case=False)]
+else:
+    filtered_df = df
+
+# Convert CSV foods to dropdown format
+def format_food(row):
+    return f"{row['food_name']} - {row['portion']} - {int(row['calories'])} kcal"
+
+csv_foods = filtered_df.apply(format_food, axis=1).tolist()
+
+# Add extra hardcoded options if CSV has less food
+extra_foods = {
+    "weight_loss": ["Puttu + Kadala Curry - 1 cup - 300 kcal", "Appam + Egg Roast - 1 nos - 280 kcal", "Oats Dosa - 2 nos - 250 kcal"],
+    "postpartum": ["Ragi Porridge - 1 bowl - 280 kcal", "Palappam + Veg Stew - 1 nos - 320 kcal", "Badam Milk - 200ml - 150 kcal"],
+    "muscle_gain": ["Banana Shake - 1 glass - 200 kcal", "Chicken Sandwich - 2 nos - 400 kcal", "Paneer Bhurji - 100g - 250 kcal"],
+    "thyroid": ["Cooked Cabbage Thoran - 1 cup - 80 kcal", "Moong Dal - 1 bowl - 180 kcal"],
+    "maintenance": ["Dosa + Sambar - 2 nos - 280 kcal", "Chappati + Curry - 2 nos - 300 kcal"]
+}
+
+if goal in extra_foods:
+    all_foods = csv_foods + extra_foods[goal]
+else:
+    all_foods = csv_foods if csv_foods else ["Food data not available - 0 kcal"]
+
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+meals = ["Breakfast", "Mid-Morning", "Lunch", "Evening", "Dinner"]
+
+for day in days:
+    with st.expander(f"📆 {day}", expanded=(day=="Monday")):
+        day_total = 0
+        cols = st.columns(5)
+        for i, meal in enumerate(meals):
+            with cols[i]:
+                st.markdown(f"**{meal}**")
+                food_choice = st.selectbox(
+                    "Choose food",
+                    all_foods,
+                    key=f"{day}_{meal}",
+                    label_visibility="collapsed"
+                )
+                # Extract calories from last part
+                try:
+                    kcal = int(food_choice.split("-")[-1].replace("kcal","").strip())
+                except:
+                    kcal = 0
+                day_total += kcal
+                st.caption(f"{kcal} kcal")
+
+        diff = day_total - target_cal
+        if abs(diff) < 50:
+            st.success(f"✅ Day Total: {day_total} kcal | Target: {int(target_cal)} kcal")
+        elif diff > 0:
+            st.warning(f"⚠️ Day Total: {day_total} kcal | {diff} kcal over target")
+        else:
+            st.info(f"ℹ️ Day Total: {day_total} kcal | {abs(diff)} kcal under target")
+
+st.markdown("---")
+col1, col2 = st.columns(2)
+with col1:
+    if st.button("🛒 Generate Weekly Shopping List", use_container_width=True):
+        st.subheader("Weekly Grocery List")
+        st.write("**Grains**: Matta Rice 2kg, Wheat Flour 2kg, Oats 500g")
+        st.write("**Pulses**: Toor Dal 500g, Chana 500g, Green Gram 500g")
+        st.write("**Vegetables**: Onion 1kg, Tomato 1kg, Spinach 2 bundles")
+        st.write("**Protein**: Eggs 15, Fish 1.5kg, Chicken 1kg")
+        st.write("**Dairy**: Milk 3L, Curd 1kg")
+        st.write("**Others**: Coconut 3, Oil 1L, Spices")
+
+with col2:
+    st.caption("Built in 1 Day 🚀 | Data: ICMR + Kerala Agri Uni")
