@@ -1,0 +1,101 @@
+id,food_name,category,portion,calories,protein_g,carbs_g,fat_g,tags
+1,Puttu,Breakfast,1 piece medium,150,3,30,1,gluten-free|bf-friendly
+2,Kadala Curry,Curry,1 cup,180,7,20,8,vegan|protein|iron
+3,Choru,Staple,1 cup cooked,200,4,45,0.5,gluten-free
+4,Sambar,Curry,1 cup,80,3,12,2,vegan|pcos-friendly
+5,Meen Curry,Fish,1 piece + gravy,120,15,2,6,postpartum|omega3
+6,Appam,Breakfast,1 piece,120,2,25,2,gluten-free|diabetes-friendly
+7,Beef Ularthiyathu,Meat,100g,250,20,0,18,keto|muscle-gain
+8,Thoran,Veg,1 cup,60,2,8,3,vegan|iron|thyroid-friendly
+9,Chappathi,Bread,1 piece,70,2,15,0.5,diabetes-friendly|weight-loss
+10,Dosa,Breakfast,1 piece,130,3,20,4,
+11,Idli,Breakfast,2 pieces,140,4,28,1,low-fat|bf-friendly
+12,Kappa,Staple,1 cup cooked,140,1,30,0,gluten-free|thyroid-friendly
+13,Meen Pollichathu,Fish,1 piece,180,18,3,10,postpartum|calcium
+14,Chicken Curry,Meat,100g,200,16,4,12,muscle-gain
+15,Avial,Veg,1 cup,100,2,15,4,thyroid-friendly|probiotic
+16,Pazham,Fruit,1 medium,105,1,27,0,bf-friendly|potassium
+17,Kondattam,Snack,10 pieces,50,2,5,3,weight-loss
+18,Moru Curry,Curry,1 cup,70,2,4,5,probiotic|summer
+19,Egg Roast,Egg,1 egg,90,6,1,7,protein|muscle-gain
+20,Oats Kanji,Breakfast,1 bowl,150,5,27,2,weight-loss|diabetes-friendly
+21,Upma,Breakfast,1 cup,200,4,35,5,
+22,Poori,Bread,1 piece,100,2,15,5,cheat-meal
+23,Parotta,Bread,1 piece,250,5,35,10,cheat-meal
+24,Egg Curry,Egg,2 eggs + gravy,220,12,4,16,protein
+25,Chicken 65,Snack,100g,300,15,10,20,cheat-meal
+26,Fish Fry,Fish,1 piece,180,15,5,12,omega3
+27,Chemmeen Curry,Seafood,100g,140,18,2,6,postpartum|iron
+28,Crab Roast,Seafood,100g,120,20,1,4,zinc
+29,Squid Fry,Seafood,100g,175,18,5,8,
+30,Koon Curry,Mushroom,1 cup,60,3,8,2,vegan|low-cal
+31,Paneer Butter Masala,Veg,1 cup,320,12,10,25,muscle-gain
+32,Gobi Manchurian,Snack,100g,280,4,30,15,cheat-meal
+33,Chicken Biriyani,Rice,1 plate,450,20,50,18,cheat-meal
+34,Beef Biriyani,Rice,1 plate,500,22,48,22,cheat-meal
+35,Veg Biriyani,Rice,1 plate,380,8,60,12,
+36,Nei Choru,Rice,1 cup,280,5,40,12,postpartum
+37,Pidi & Kozhi,Main,1 plate,550,25,45,28,cheat-meal
+38,Kozhi Curry,Meat,100g,210,17,3,14,muscle-gain
+39,Mutton Curry,Meat,100g,260,20,2,19,iron|postpartum
+40,Erissery,Veg,1 cup,150,4,20,6,thyroid-friendly
+41,Olan,Veg,1 cup,90,2,12,4,vegan|summer
+42,Pachadi,Veg,1 cup,70,1,10,3,probiotic
+43,Kichadi,Veg,1 cup,80,2,12,3,
+44,Inji Curry,Side,2 tbsp,40,0.5,8,1,digestion
+45,Mango Pickle,Side,1 tbsp,30,0.2,6,1,cheat-meal
+46,Naranga Achar,Side,1 tbsp,25,0.2,5,1,
+47,Chakka Puzhukku,Staple,1 cup,180,2,40,1,gluten-free|fiber
+48,Kappa Biriyani,Main,1 plate,400,8,70,10,
+49,Mathi Fry,Fish,2 pieces,160,14,2,10,omega3|calcium
+50,Ayala Curry,Fish,1 piece,140,16,2,7,omega3
+51,Karimeen Pollichathu,Fish,1 piece,200,20,3,11,postpartum
+52,Chemmeen Fry,Seafood,100g,220,16,5,15,
+53,Konju Roast,Seafood,100g,130,21,1,4,protein
+54,Kallummakkaya Fry,Seafood,100g,150,12,8,6,iron|zinc
+55,Pazham Pori,Snack,1 piece,160,2,25,6,cheat-meal|kids
+56,Uzhunnu Vada,Snack,1 piece,100,3,12,5,protein
+57,Parippu Vada,Snack,1 piece,90,4,10,4,vegan|protein
+58,Bonda,Snack,1 piece,120,2,15,6,
+59,Samosa,Snack,1 piece,150,3,18,8,cheat-meal
+60,Pakora,Snack,100g,280,5,30,15,cheat-meal
+61,Kozhukkatta,Snack,1 piece,80,1,18,0.5,vegan
+62,Unniyappam,Snack,1 piece,90,1,15,3,
+63,Neyyappam,Snack,1 piece,110,1,18,4,
+64,Achappam,Snack,1 piece,70,1,10,3,
+65,Kuzhalappam,Snack,1 piece,60,1,12,1,
+66,Muttamala,Dessert,100g,300,6,35,15,postpartum
+67,Palada Payasam,Dessert,1 cup,280,5,45,10,cheat-meal
+68,Semiya Payasam,Dessert,1 cup,250,4,40,8,
+69,Parippu Payasam,Dessert,1 cup,260,6,42,7,protein
+70,Ada Pradhaman,Dessert,1 cup,320,5,50,12,cheat-meal
+71,Chakka Varatti,Dessert,2 tbsp,120,0.5,30,0,vegan
+72,Halwa,Dessert,100g,400,2,60,18,cheat-meal
+73,Jalebi,Dessert,100g,450,2,70,18,cheat-meal
+74,Laddu,Dessert,1 piece,150,2,25,5,
+75,Banana Chips,Snack,30g,160,1,15,11,cheat-meal
+76,Chakka Chips,Snack,30g,150,1,18,8,
+77,Kara,Snack,30g,140,3,15,8,protein
+78,Mixture,Snack,30g,150,4,16,8,
+79,Murukku,Snack,30g,155,2,18,8,
+80,Kerala Porotta + Beef,Bread+Meat,1 porotta+100g beef,500,25,35,28,cheat-meal|muscle-gain
+81,Pathiri,Bread,1 piece,80,2,16,1,gluten-free
+82,Irachi Pathiri,Snack,1 piece,180,8,20,8,muscle-gain
+83,Oratti,Breakfast,1 piece,140,3,28,2,
+84,Noolputtu,Breakfast,1 cup,130,3,26,1,bf-friendly
+85,Idiyappam,Breakfast,2 pieces,150,3,30,1,low-fat
+86,Kadalai,Snack,30g,170,7,15,9,vegan|protein|iron
+87,Peechinga Thoran,Veg,1 cup,50,1,8,2,weight-loss|fiber
+88,Padavalanga Thoran,Veg,1 cup,55,1,9,2,diabetes-friendly
+89,Vendakka Mezhukkupuratti,Veg,1 cup,80,2,10,4,
+90,Chembu Asthram,Root,1 cup,120,1,28,0,gluten-free
+91,Chena Mezhukkupuratti,Root,1 cup,110,1,25,1,
+92,Kovakka Thoran,Veg,1 cup,45,1,8,1,weight-loss
+93,Payar Thoran,Veg,1 cup,90,5,12,3,vegan|protein|iron
+94,Cheera Thoran,Veg,1 cup,40,2,5,2,iron|postpartum
+95,Muringakka Sambar,Curry,1 cup,85,3,13,2,calcium
+96,Thakkali Curry,Curry,1 cup,60,1,10,2,vegan
+97,Ulli Theeyal,Curry,1 cup,110,2,15,5,
+98,Varutharacha Kozhi,Meat,100g,240,18,3,17,muscle-gain
+99,Nadan Kozhi Roast,Meat,100g,220,19,2,15,
+100,Mutta Thoran,Egg,2 eggs,180,12,2,14,protein|bf-friendly
