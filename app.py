@@ -13,13 +13,14 @@ st.title("🥥 AI Nutrition Coach for Keralites")
 st.write("**Zeroth Phase MVP** - Personalized Kerala meal plans for weight loss, postpartum, thyroid, PCOS")
 
 st.sidebar.header("📊 Your Details")
-name = st.sidebar.text_input("Name", "Enter your name")
-age = st.sidebar.number_input("Age", 18,50,23)
-weight = st.sidebar.number_input("Weight (kg)", 50,85,61.5)
-height = st.sidebar.number_input("Height (cm)", 165,170,155)
+st.sidebar.header("📊 Your Details")
+name = st.sidebar.text_input("Name", "", placeholder="Enter your name")
+age = st.sidebar.number_input("Age", min_value=10, max_value=100, value=25)
+weight = st.sidebar.number_input("Weight (kg)", min_value=30.0, max_value=200.0, value=60.0, step=0.5)
+height = st.sidebar.number_input("Height (cm)", min_value=100, max_value=220, value=160)
 gender = st.sidebar.selectbox("Gender", ["female", "male"])
-goal = st.sidebar.selectbox("Goal", ["weight_loss", "muscle_gain", "postpartum", "thyroid", "maintenance"])
-activity = st.sidebar.select_slider("Activity", ["Sedentary", "Light", "Moderate", "Active"], "Light")
+goal = st.sidebar.selectbox("Goal", ["weight_loss", "postpartum", "muscle_gain", "thyroid", "pcos"])
+activity = st.sidebar.selectbox("Activity", ["sedentary", "light", "moderate", "active", "very_active"])
 
 if gender == "female":
     bmr = 10*weight + 6.25*height - 5*age - 161
