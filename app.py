@@ -10,7 +10,7 @@ def load_data():
 df = load_data()
 
 st.title("🥥 AI Nutrition Coach for Keralites")
-st.write("**Zeroth Phase MVP** - Personalized Kerala meal plans for weight loss, postpartum, thyroid, PCOS")
+st.write("Personalized Kerala meal plans for weight loss, postpartum, thyroid, PCOS")
 
 st.sidebar.header("📊 Your Details")
 st.sidebar.header("📊 Your Details")
