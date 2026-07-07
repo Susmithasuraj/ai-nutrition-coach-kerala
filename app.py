@@ -151,7 +151,7 @@ with col2:
 st.markdown("---")
 # ========== AI NUTRITION CHAT STARTS HERE ==========
 
-    from google import genai
+from google import genai
 
 try:
     API_KEY = st.secrets["API_KEY"]  # Streamlit Cloud deployment-inu
