@@ -14,7 +14,6 @@ st.title("🥥 AI Nutrition Coach for Keralites")
 st.write("Personalized Kerala meal plans for weight loss, postpartum, thyroid, PCOS")
 
 st.sidebar.header("📊 Your Details")
-st.sidebar.header("📊 Your Details")
 name = st.sidebar.text_input("Name", "", placeholder="Enter your name")
 age = st.sidebar.number_input("Age", min_value=10, max_value=100, value=25)
 weight = st.sidebar.number_input("Weight (kg)", min_value=30.0, max_value=200.0, value=60.0, step=0.5)
