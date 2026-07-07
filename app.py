@@ -148,27 +148,24 @@ with col1:
 with col2:
     st.caption("Built in 1 Day 🚀 | Data: ICMR + Kerala Agri Uni")
 # ========== AI NUTRITION CHAT STARTS HERE ==========
-st.markdown("---")
-st.header("💬 Ask Kerala AI Nutrition Coach")
-
-# STEP 1: API KEY CONNECT CHEYYU
-import google.generativeai as genai
+from google import genai
 
 try:
     API_KEY = st.secrets["API_KEY"]  # Streamlit Cloud deployment-inu
 except:
-    API_KEY = "AQ.AbBRN6LFIPJRwFhPOEGzo3FWuEwpcrYoCgpMVNzhaDhBqAPK8g" # Local test-inu mathram
+    API_KEY = "AQ.AbBRN6LFIPJRwFhPOEGzo3FWuEupcrYoCgpMVNzhaDhBqAPKg#" # Local test-inu
 
-genai.configure(api_key=API_KEY)
+client = genai.Client(api_key=API_KEY)
 
 # STEP 2: CHAT INPUT
 user_question = st.text_input("Ask me anything: Ex: '1 plate biriyani calories?', 'PCOS diet plan venam'")
 
 if st.button("Ask AI") and user_question:
     with st.spinner("AI is thinking... 🧠"):
-        model = genai.GenerativeModel('gemini-1.5-flash')
         
-        prompt = f"""
+```python
+prompt = f"""
+...
         You are "Kerala AI Nutrition Coach". Reply in Malayalam + English mix. Be short and helpful.
         
         User Profile:
