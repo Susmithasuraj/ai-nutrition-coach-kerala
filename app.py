@@ -1,5 +1,6 @@
 import streamlit as st
 import pandas as pd
+from google import genai
 
 st.set_page_config(page_title="Kerala Nutrition Coach", page_icon="🥥", layout="wide")
 
