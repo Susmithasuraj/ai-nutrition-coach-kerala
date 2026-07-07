@@ -146,3 +146,42 @@ with col1:
 
 with col2:
     st.caption("Built in 1 Day 🚀 | Data: ICMR + Kerala Agri Uni")
+# ========== AI NUTRITION CHAT STARTS HERE ==========
+st.markdown("---")
+st.header("💬 Ask Kerala AI Nutrition Coach")
+
+# STEP 1: API KEY CONNECT CHEYYU
+import google.generativeai as genai
+
+try:
+    API_KEY = st.secrets["API_KEY"]  # Streamlit Cloud deployment-inu
+except:
+    API_KEY = "AQ.AbBRN6LFIPJRwFhPOEGzo3FWuEwpcrYoCgpMVNzhaDhBqAPK8g" # Local test-inu mathram
+
+genai.configure(api_key=API_KEY)
+
+# STEP 2: CHAT INPUT
+user_question = st.text_input("Ask me anything: Ex: '1 plate biriyani calories?', 'PCOS diet plan venam'")
+
+if st.button("Ask AI") and user_question:
+    with st.spinner("AI is thinking... 🧠"):
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        
+        prompt = f"""
+        You are "Kerala AI Nutrition Coach". Reply in Malayalam + English mix. Be short and helpful.
+        
+        User Profile:
+        Name: {name}, Age: {age}, Weight: {weight}kg, Goal: {goal}
+        Daily Target Calories: {int(target_cal)} kcal
+        
+        User Question: {user_question}
+        
+        Rules: 
+        1. Use Kerala foods like Kanji, Kappa, Meen Curry, Thoran
+        2. Give calories if food related question
+        3. Keep answer under 5 lines
+        """
+        response = model.generate_content(prompt)
+        st.success(response.text)
+
+st.caption("Powered by Google Gemini AI | Data: ICMR 2020")
