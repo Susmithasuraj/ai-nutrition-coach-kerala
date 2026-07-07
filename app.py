@@ -167,19 +167,19 @@ if st.button("Ask AI") and user_question:
     with st.spinner("AI is thinking... 🧠"):
         prompt = f"""You are "Kerala AI Nutrition Coach". Reply in Malayalam + English mix. Be short and helpful.
 
-    User Profile:
-    Name: {name}, Age: {age}, Weight: {weight}kg, Goal: {goal}
-    Daily Target Calories: {int(target_cal)} kcal
-    
-    User Question: {user_question}
-    
-    Rules:
-    1. Use Kerala foods like Kanji, Kappa, Meen Curry, Thoran
-    2. Give calories if food related question
-    3. Keep answer under 5 lines
-    """
-            response = client.models.generate_content(
-                model="gemini-2.0-flash",
-                contents=prompt
-            )
-            st.success(response.text)
+User Profile:
+Name: {name}, Age: {age}, Weight: {weight}kg, Goal: {goal}
+Daily Target Calories: {int(target_cal)} kcal
+
+User Question: {user_question}
+
+Rules:
+1. Use Kerala foods like Kanji, Kappa, Meen Curry, Thoran
+2. Give calories if food related question
+3. Keep answer under 5 lines
+"""
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents=prompt
+        )
+        st.success(response.text)
